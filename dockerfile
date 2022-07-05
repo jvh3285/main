@@ -1,5 +1,4 @@
 FROM golang:1.16.3-stretch AS builder
-LABEL AUTHOR Seungkyu Ahn (seungkyua@gmail.com)
 
 RUN mkdir -p /build
 WORKDIR /build
