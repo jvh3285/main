@@ -1,4 +1,4 @@
-FROM bitnami/jupyter-base-notebook:latest
+FROM docker.io/jupyter/minimal-notebook
 USER root
 RUN conda install --quiet --yes \
     'matplotlib-base' \
