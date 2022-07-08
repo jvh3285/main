@@ -1,9 +1,9 @@
 name: jupyter-docker CI
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "jupyter" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "jupyter" ]
 
 jobs:
   build-and-push-image:
