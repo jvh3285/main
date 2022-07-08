@@ -1,4 +1,6 @@
 FROM jupyter/tensorflow-notebook:latest
 USER root
-RUN chown -R jovyan /home/jovyan
+RUN chmod 775 /home/jovyan
+RUN chgrp -R 0 /home/jovyan && \
+    chmod -R g=u /home/jovyan
 USER jovyan
