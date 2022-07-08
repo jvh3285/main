@@ -29,3 +29,5 @@ jobs:
         file: ./Paas/docker_file/jupyter_notebook/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/jupyter_notebook:latest
+        cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/jupyter_notebook:latest
+        cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/jupyter_notebook:latest,mode=max
