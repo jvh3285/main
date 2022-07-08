@@ -5,3 +5,4 @@ RUN conda install --quiet --yes \
     'scipy' && \
     conda clean --all -f -y
 USER 1001
+RUN chown -R 1001:0 /home/jovyan
