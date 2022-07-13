@@ -1,9 +1,9 @@
-name: Docker Image CI
+name: docker-image CI
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "test" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "test" ]
 
 jobs:
   build-and-push-image:
@@ -25,5 +25,7 @@ jobs:
       id: docker_build
       uses: docker/build-push-action@v2
       with:
+        context: .
+        file: ./Paas/docker_file/jupyter_notebook/
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spring_boot:latest
